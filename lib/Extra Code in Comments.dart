@@ -505,7 +505,7 @@ void upDateColor(Gender gender) {
   ///////////////////////
   upDateColor(Gender.male);
  */
-//TODO Step 21 Introducing Ternery Operator
+//TODO Step 22 Introducing Ternery Operator
 /*
 Gender selectedGender;
 ======================
@@ -513,4 +513,50 @@ setState(() {selectedGender = Gender.male;});
 //upDateColor(Gender.male);
 =========================
 selectedGender == Gender.male ? activeColor : inactiveColor,
+ */
+//TODO Step 23 Add Bottom Container in App UI
+/*
+Container(
+            margin: EdgeInsets.only(top: 10.0),
+            padding: EdgeInsets.only(bottom: 20.0),
+            width: double.infinity,
+            height: 70.0,
+            color: Colors.lightGreen,
+            child: Center(
+              child: Text(
+                "Calculate",
+                style: TextStyle(
+                  fontSize: 30.0,
+                ),
+              ),
+            ),
+          ),
+ */
+//TODO Step 24 Remove Gesture Detector Widget and Add Gesture Detector in ReuseableConatiner
+//TODO Step 25 Use "Function" as a parameter and AdJust gesturedetector in ReuseableConatiner
+/*
+final Function onPress;
+  ReuseableContainer({@required this.colorr, this.cardWidget,this.onPress});
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onPress,
+      child: Container(
+        child: cardWidget,
+        margin: EdgeInsets.all(15.0),
+        decoration: BoxDecoration(
+          color: colorr,
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+      ),
+    );
+  }
+ */
+//TODO Step 26 Use now on Resuseable card widget
+/*
+onPress: (){
+                      setState(() {
+                        selectedGender=Gender.male;
+                      });
+                    },
  */

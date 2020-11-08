@@ -17,6 +17,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
+
   // Color maleColor = inactiveColor;
   // Color femaleColor = inactiveColor;
 //1 for male and 2 for female
@@ -51,41 +52,34 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReuseableContainer(
+                    onPress: () {
                       setState(() {
                         selectedGender = Gender.male;
-                        //upDateColor(Gender.male);
                       });
-                      // print("Male Card Cliked");
                     },
-                    child: ReuseableContainer(
-                      colorr: selectedGender == Gender.male
-                          ? activeColor
-                          : inactiveColor,
-                      cardWidget: iconColumn(
-                        icon: Icons.ac_unit_outlined,
-                        label: "Male",
-                      ),
+                    colorr: selectedGender == Gender.male
+                        ? activeColor
+                        : inactiveColor,
+                    cardWidget: iconColumn(
+                      icon: Icons.ac_unit_outlined,
+                      label: "Male",
                     ),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReuseableContainer(
+                    onPress: () {
                       setState(() {
                         selectedGender = Gender.female;
-                        // upDateColor(Gender.female);
                       });
                     },
-                    child: ReuseableContainer(
-                      colorr: selectedGender == Gender.female
-                          ? activeColor
-                          : inactiveColor,
-                      cardWidget: iconColumn(
-                        icon: Icons.accessibility,
-                        label: "Female",
-                      ),
+                    colorr: selectedGender == Gender.female
+                        ? activeColor
+                        : inactiveColor,
+                    cardWidget: iconColumn(
+                      icon: Icons.accessibility,
+                      label: "Female",
                     ),
                   ),
                 ),
@@ -101,6 +95,21 @@ class _InputPageState extends State<InputPage> {
                 Expanded(child: ReuseableContainer(colorr: activeColor)),
                 Expanded(child: ReuseableContainer(colorr: activeColor)),
               ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 10.0),
+            padding: EdgeInsets.only(bottom: 20.0),
+            width: double.infinity,
+            height: 70.0,
+            color: Colors.lightGreen,
+            child: Center(
+              child: Text(
+                "Calculate",
+                style: TextStyle(
+                  fontSize: 30.0,
+                ),
+              ),
             ),
           ),
         ],
