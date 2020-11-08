@@ -5,3 +5,11 @@ const kinactiveColor = Color(0xFF111320);
 const kbottemContainerStyle = TextStyle(
   fontSize: 30.0,
 );
+
+const kLabelStyle = TextStyle(
+  fontSize: 20.0,
+);
+const kNumberStyle = TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.w900,
+);

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constantFile.dart';
 
 class iconColumn extends StatelessWidget {
   iconColumn({@required this.icon, this.label});
@@ -18,9 +19,7 @@ class iconColumn extends StatelessWidget {
         ),
         Text(
           label,
-          style: TextStyle(
-            fontSize: 20.0,
-          ),
+          style: kLabelStyle,
         ),
       ],
     );

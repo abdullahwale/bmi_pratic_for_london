@@ -566,4 +566,63 @@ const bottemContainerStyle = TextStyle(
   fontSize: 30.0,
 );
  */
-//TODO Step 27 Refactoring all Constants
+//TODO Step 28 Creating cardWidget for Big container
+/*
+cardWidget: Column(
+                children: [
+                  Text(
+                    "Height",
+                    style: kLabelStyle,
+                  ),
+                ],
+              ),
+ */
+//TODO Step 29 Creating cardWidget improved
+/*
+in main Colounm
+crossAxisAlignment: CrossAxisAlignment.stretch,
+ */
+//TODO Step 30 Creating Without Slider
+/*
+ cardWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Height",
+                    style: kLabelStyle,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    children: [
+                      Text(
+                        "180",
+                        style: kNumberStyle,
+                      ),
+                      Text(
+                        "cm",
+                        style: kLabelStyle,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+ */
+
+//TODO Step 31 Creating Slider
+/*
+int height=180;
+
+Slider(
+                    activeColor: Colors.yellowAccent,
+                    inactiveColor: Colors.lightGreenAccent,
+                    value: height.toDouble(),
+                    onChanged: (double newValue) {
+                      setState(() {
+                        height = newValue.round();
+                      });
+                    },
+                    min: 120,
+                    max: 220,
+                  )
+ */

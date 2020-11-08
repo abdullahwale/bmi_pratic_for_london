@@ -16,7 +16,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
-
+  int height = 180;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +24,7 @@ class _InputPageState extends State<InputPage> {
         title: Text('BMI CALCULATOR'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: Row(
@@ -64,7 +65,44 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Expanded(
-            child: ReuseableContainer(colorr: kactiveColor),
+            child: ReuseableContainer(
+              colorr: kactiveColor,
+              cardWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Height",
+                    style: kLabelStyle,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    children: [
+                      Text(
+                        height.toString(),
+                        style: kNumberStyle,
+                      ),
+                      Text(
+                        "cm",
+                        style: kLabelStyle,
+                      ),
+                    ],
+                  ),
+                  Slider(
+                    activeColor: Colors.yellowAccent,
+                    inactiveColor: Colors.lightGreenAccent,
+                    value: height.toDouble(),
+                    onChanged: (double newValue) {
+                      setState(() {
+                        height = newValue.round();
+                      });
+                    },
+                    min: 120,
+                    max: 220,
+                  )
+                ],
+              ),
+            ),
           ),
           Expanded(
             child: Row(
