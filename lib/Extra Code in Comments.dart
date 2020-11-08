@@ -560,7 +560,10 @@ onPress: (){
                       });
                     },
  */
-//TODO Step 27 Deign Next Slider Bar
+//TODO Step 27 Create Constant file
 /*
-
+const bottemContainerStyle = TextStyle(
+  fontSize: 30.0,
+);
  */
+//TODO Step 27 Refactoring all Constants
