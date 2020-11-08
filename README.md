@@ -1,4 +1,4 @@
-# bmi_pratic_for_london
+# BMI_Calculator_Step_by_Step
 
 A new Flutter application.
 
