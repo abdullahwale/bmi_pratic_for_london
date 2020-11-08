@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'reUseableCardWidgets.dart';
 import 'reuseContainerWidget.dart';
+import 'constantFile.dart';
 
 const activeColor = Color(0xFF1D1E33);
 const inactiveColor = Color(0xFF111320);
@@ -106,9 +107,7 @@ class _InputPageState extends State<InputPage> {
             child: Center(
               child: Text(
                 "Calculate",
-                style: TextStyle(
-                  fontSize: 30.0,
-                ),
+                style: bottemContainerStyle,
               ),
             ),
           ),
