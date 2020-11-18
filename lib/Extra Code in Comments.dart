@@ -662,3 +662,41 @@ Expanded(
                 ),
  */
 //TODO Step 33 Update Last Containers
+/*
+Expanded(
+                  child: ReuseableContainer(
+                    colorr: kactiveColor,
+                    cardWidget: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Weight",
+                          style: kLabelStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kNumberStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+ */
+//TODO Step 34 Update Last Containers
+/*
+
+ */

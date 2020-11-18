@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'reUseableCardWidgets.dart';
 import 'reuseContainerWidget.dart';
 import 'constantFile.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 enum Gender {
   male,
@@ -126,15 +127,15 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            FloatingActionButton(
-                                backgroundColor: Colors.lightGreenAccent,
-                                child: Icon(Icons.add)),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                            ),
                             SizedBox(
                               width: 10.0,
                             ),
-                            FloatingActionButton(
-                                backgroundColor: Colors.lightGreenAccent,
-                                child: Icon(Icons.add)),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                            ),
                           ],
                         ),
                       ],
@@ -162,6 +163,22 @@ class _InputPageState extends State<InputPage> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class RoundIconButton extends StatelessWidget {
+  RoundIconButton({this.icon});
+  final IconData icon;
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      child: Icon(icon),
+      elevation: 6.0,
+      shape: CircleBorder(),
+      fillColor: Colors.lightGreen,
+      constraints: BoxConstraints.tightFor(width: 56.0, height: 56.0),
+      onPressed: () {},
     );
   }
 }
