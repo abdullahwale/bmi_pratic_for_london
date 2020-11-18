@@ -626,4 +626,39 @@ Slider(
                     max: 220,
                   )
  */
-//TODO Just Testing
+//TODO Step 32 Create Last Containers
+/*
+Expanded(
+                  child: ReuseableContainer(
+                    colorr: kactiveColor,
+                    cardWidget: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Weight",
+                          style: kLabelStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kNumberStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                                backgroundColor: Colors.lightGreenAccent,
+                                child: Icon(Icons.add)),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            FloatingActionButton(
+                                backgroundColor: Colors.lightGreenAccent,
+                                child: Icon(Icons.add)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+ */
+//TODO Step 33 Update Last Containers

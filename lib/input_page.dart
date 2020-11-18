@@ -17,6 +17,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
   int height = 180;
+  int weight = 60;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,8 +109,41 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ReuseableContainer(colorr: kactiveColor)),
-                Expanded(child: ReuseableContainer(colorr: kactiveColor)),
+                Expanded(
+                  child: ReuseableContainer(
+                    colorr: kactiveColor,
+                    cardWidget: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Weight",
+                          style: kLabelStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kNumberStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                                backgroundColor: Colors.lightGreenAccent,
+                                child: Icon(Icons.add)),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            FloatingActionButton(
+                                backgroundColor: Colors.lightGreenAccent,
+                                child: Icon(Icons.add)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: ReuseableContainer(colorr: kactiveColor),
+                ),
               ],
             ),
           ),
