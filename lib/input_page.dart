@@ -1,3 +1,4 @@
+import 'package:bmi_pratic_for_london/reultPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'reUseableCardWidgets.dart';
@@ -198,16 +199,22 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 10.0),
-            padding: EdgeInsets.only(bottom: 20.0),
-            width: double.infinity,
-            height: 70.0,
-            color: Colors.lightGreen,
-            child: Center(
-              child: Text(
-                "Calculate",
-                style: kbottemContainerStyle,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ResultPage()));
+            },
+            child: Container(
+              margin: EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.only(bottom: 20.0),
+              width: double.infinity,
+              height: 70.0,
+              color: Colors.lightGreen,
+              child: Center(
+                child: Text(
+                  "Calculate",
+                  style: kbottemContainerStyle,
+                ),
               ),
             ),
           ),
