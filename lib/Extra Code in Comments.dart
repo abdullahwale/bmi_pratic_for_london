@@ -724,4 +724,92 @@ RoundIconButton({@required this.icon, @required this.onPressed});
 /*
 
  */
-//TODO Step 38 Testing Commit
+//TODO Step 38 Add GestureDetector
+/*
+GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ResultPage()));
+            },
+ */
+//TODO Step 39 Create New Screen
+/*
+import 'package:flutter/material.dart';
+
+class ResultPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('BMI Calculator'),
+      ),
+      body: Text('Hello'),
+    );
+  }
+}
+
+ */
+//TODO Step 40 Add Two Expanded Widgets
+/*
+Scaffold(
+      appBar: AppBar(
+        title: Text('BMI CALCULATOR'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.all(15.0),
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                'Your Result',
+                style: kTitleTextStyle,
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 5,
+            child: ReuseableContainer(
+              colorr: kactiveColor,
+              cardWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'resultText.toUpperCase()',
+                    style: kResultTextStyle,
+                  ),
+                  Text(
+                    'bmiResult',
+                    //style: kBMITextStyle,
+                  ),
+                  Text(
+                    'interpretation',
+                    textAlign: TextAlign.center,
+                    style: kBodyTextStyle,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          /* BottomButton(
+            buttonTitle: 'RE-CALCULATE',
+            onTap: () {
+              Navigator.pop(context);
+            },
+          )*/
+        ],
+      ),
+    );
+ */
+//TODO Step 41 Add Bottom Button in Result Page and BottomButton class
+/*
+BottomButton(
+            buttonTitle: 'RE-CALCULATE',
+            onTap: () {
+              Navigator.pop(context);
+            },
+          )
+*/
